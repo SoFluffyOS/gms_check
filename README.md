@@ -1,6 +1,6 @@
 # gms_check
 
-**This tiny plugin simply check if Google Services is avalable in the Android device.**
+**This tiny plugin simply checks if Google Services is available on the Android device.**
 
 For other platform, it always return `true` as default.
 
