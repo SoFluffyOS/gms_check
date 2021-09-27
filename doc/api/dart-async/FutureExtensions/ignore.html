@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ignore method from the FutureExtensions extension, for the Dart programming language.">
+  <title>ignore method - FutureExtensions extension - dart:async library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../..">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+  <!-- header placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">gms_check</a></li>
+    <li><a href="dart-async/dart-async-library.html">dart:async</a></li>
+    <li><a href="dart-async/FutureExtensions.html">FutureExtensions<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></a></li>
+    <li class="self-crumb">ignore method</li>
+  </ol>
+  <div class="self-name">ignore</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="index.html">gms_check</a></li>
+      <li><a href="dart-async/dart-async-library.html">dart:async</a></li>
+      <li><a href="dart-async/FutureExtensions.html">FutureExtensions<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></a></li>
+      <li class="self-crumb">ignore method</li>
+    </ol>
+    
+    <h5>FutureExtensions extension</h5>
+    <ol>
+    
+    
+    
+        <li class="section-title"><a href="dart-async/FutureExtensions.html#instance-methods">Methods</a></li>
+        <li><a href="dart-async/FutureExtensions/ignore.html">ignore</a></li>
+        <li><a href="dart-async/FutureExtensions/onError.html">onError</a></li>
+    
+    
+    
+    
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <div><h1><span class="kind-method">ignore</span> method</h1></div>
+
+    <section class="multi-line-signature">
+      <div>
+        <ol class="annotation-list">
+          <li>@Since(&quot;2.14&quot;)</li>
+        </ol>
+      </div>
+      <span class="returntype">void</span>
+            <span class="name ">ignore</span>
+(<wbr>)
+      <div class="features">@Since(&quot;2.14&quot;)</div>
+    </section>
+    <section class="desc markdown">
+      <p>Completely ignores this future and its result.</p>
+<p>Not all futures are important, not even if they contain errors,
+for example if a request was made, but the response is no longer needed.
+Simply ignoring a future can result in uncaught asynchronous errors.
+This method instead handles (and ignores) any values or errors
+coming from this future, making it safe to otherwise ignore
+the future.</p>
+<p>Use <code>ignore</code> to signal that the result of the future is
+no longer important to the program, not even if it's an error.
+If you merely want to silence the <a href="https://dart-lang.github.io/linter/lints/unawaited_futures.html">"unawaited futures" lint</a>,
+use the <code>unawaited</code> function instead.
+That will ensure that an unexpected error is still reported.</p>
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Implementation</span></h2>
+      <pre class="language-dart"><code class="language-dart">@Since(&quot;2.14&quot;)
+void ignore() {
+  var self = this;
+  if (self is _Future&lt;T&gt;) {
+    self._ignore();
+  } else {
+    self.then&lt;void&gt;(_ignore, onError: _ignore);
+  }
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    gms_check
+      1.0.0
+  </span>
+
+  <!-- footer-text placeholder -->
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- footer placeholder -->
+
+</body>
+
+</html>

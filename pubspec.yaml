@@ -1,0 +1,24 @@
+name: gms_check
+description: This tiny plugin simply check if Google Services is avalable in the Android device.
+version: 1.0.0
+homepage: https://github.com/simonpham/gms_check
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.20.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.github.simonpham.gms_check
+        pluginClass: GmsCheckPlugin

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the hash method from the Object class, for the Dart programming language.">
+  <title>hash method - Object class - dart:core library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../..">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+  <!-- header placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">gms_check</a></li>
+    <li><a href="dart-core/dart-core-library.html">dart:core</a></li>
+    <li><a href="dart-core/Object-class.html">Object</a></li>
+    <li class="self-crumb">hash method</li>
+  </ol>
+  <div class="self-name">hash</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="index.html">gms_check</a></li>
+      <li><a href="dart-core/dart-core-library.html">dart:core</a></li>
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+      <li class="self-crumb">hash method</li>
+    </ol>
+    
+    <h5>Object class</h5>
+    <ol>
+    
+        <li class="section-title"><a href="dart-core/Object-class.html#constructors">Constructors</a></li>
+        <li><a href="dart-core/Object/Object.html">Object</a></li>
+    
+        <li class="section-title">
+            <a href="dart-core/Object-class.html#instance-properties">Properties</a>
+        </li>
+        <li><a href="dart-core/Object/hashCode.html">hashCode</a></li>
+        <li><a href="dart-core/Object/runtimeType.html">runtimeType</a></li>
+    
+        <li class="section-title"><a href="dart-core/Object-class.html#instance-methods">Methods</a></li>
+        <li><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+        <li><a href="dart-core/Object/toString.html">toString</a></li>
+    
+        <li class="section-title"><a href="dart-core/Object-class.html#operators">Operators</a></li>
+        <li><a href="dart-core/Object/operator_equals.html">operator ==</a></li>
+    
+    
+        <li class="section-title"><a href="dart-core/Object-class.html#static-methods">Static methods</a></li>
+        <li><a href="dart-core/Object/hash.html">hash</a></li>
+        <li><a href="dart-core/Object/hashAll.html">hashAll</a></li>
+        <li><a href="dart-core/Object/hashAllUnordered.html">hashAllUnordered</a></li>
+    
+    
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <div><h1><span class="kind-method">hash</span> method</h1></div>
+
+    <section class="multi-line-signature">
+      <div>
+        <ol class="annotation-list">
+          <li>@Since(&quot;2.14&quot;)</li>
+        </ol>
+      </div>
+      <span class="returntype"><a href="dart-core/int-class.html">int</a></span>
+            <span class="name ">hash</span>
+(<wbr><span class="parameter" id="hash-param-object1"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">object1</span>, [</span> <span class="parameter" id="hash-param-object2"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">object2</span>, [</span> <span class="parameter" id="hash-param-object3"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">object3</span> = <span class="default-value">sentinelValue</span></span> <span class="parameter" id="hash-param-object4"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">object4</span> = <span class="default-value">sentinelValue</span></span> <span class="parameter" id="hash-param-object5"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">object5</span> = <span class="default-value">sentinelValue</span></span> <span class="parameter" id="hash-param-object6"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">object6</span> = <span class="default-value">sentinelValue</span></span> <span class="parameter" id="hash-param-object7"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">object7</span> = <span class="default-value">sentinelValue</span></span> <span class="parameter" id="hash-param-object8"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">object8</span> = <span class="default-value">sentinelValue</span></span> <span class="parameter" id="hash-param-object9"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">object9</span> = <span class="default-value">sentinelValue</span></span> <span class="parameter" id="hash-param-object10"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">object10</span> = <span class="default-value">sentinelValue</span></span> <span class="parameter" id="hash-param-object11"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">object11</span> = <span class="default-value">sentinelValue</span></span> <span class="parameter" id="hash-param-object12"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">object12</span> = <span class="default-value">sentinelValue</span></span> <span class="parameter" id="hash-param-object13"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">object13</span> = <span class="default-value">sentinelValue</span></span> <span class="parameter" id="hash-param-object14"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">object14</span> = <span class="default-value">sentinelValue</span></span> <span class="parameter" id="hash-param-object15"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">object15</span> = <span class="default-value">sentinelValue</span></span> <span class="parameter" id="hash-param-object16"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">object16</span> = <span class="default-value">sentinelValue</span></span> <span class="parameter" id="hash-param-object17"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">object17</span> = <span class="default-value">sentinelValue</span></span> <span class="parameter" id="hash-param-object18"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">object18</span> = <span class="default-value">sentinelValue</span></span> <span class="parameter" id="hash-param-object19"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">object19</span> = <span class="default-value">sentinelValue</span></span> <span class="parameter" id="hash-param-object20"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">object20</span> = <span class="default-value">sentinelValue</span></span> ])
+      <div class="features">@Since(&quot;2.14&quot;)</div>
+    </section>
+    <section class="desc markdown">
+      <p>Creates a combined hash code for a number of objects.</p>
+<p>The hash code is computed for all arguments that are actually
+supplied, even if they are <code>null</code>, by numerically combining the
+<a href="dart-core/Object/hashCode.html">Object.hashCode</a> of each argument.</p>
+<p>Example:</p>
+<pre class="language-dart"><code class="language-dart">class SomeObject {
+  final Object a, b, c;
+  SomeObject(this.a, this.b, this.c);
+  bool operator=(Object other) =&gt;
+      other is SomeObject &amp;&amp; a == other.a &amp;&amp; b == other.b &amp;&amp; c == other.c;
+  int get hashCode =&gt; Object.hash(a, b, c);
+}
+</code></pre>
+<p>The computed value will be consistent when the function is called
+with the same arguments multiple times
+during the execution of a single program.</p>
+<p>The hash value generated by this function is <em>not</em> guaranteed to be stable
+over different runs of the same program,
+or between code run in different isolates of the same program.
+The exact algorithm used may differ between different platforms,
+or between different versions of the platform libraries,
+and it may depend on values that change on each program execution.</p>
+<p>The <a href="dart-core/Object/hashAll.html">hashAll</a> function gives the same result as this function when
+called with a collection containing the actual arguments
+to this function in the same order.</p>
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Implementation</span></h2>
+      <pre class="language-dart"><code class="language-dart">@Since(&quot;2.14&quot;)
+static int hash(Object? object1, Object? object2,
+    [Object? object3 = sentinelValue,
+    Object? object4 = sentinelValue,
+    Object? object5 = sentinelValue,
+    Object? object6 = sentinelValue,
+    Object? object7 = sentinelValue,
+    Object? object8 = sentinelValue,
+    Object? object9 = sentinelValue,
+    Object? object10 = sentinelValue,
+    Object? object11 = sentinelValue,
+    Object? object12 = sentinelValue,
+    Object? object13 = sentinelValue,
+    Object? object14 = sentinelValue,
+    Object? object15 = sentinelValue,
+    Object? object16 = sentinelValue,
+    Object? object17 = sentinelValue,
+    Object? object18 = sentinelValue,
+    Object? object19 = sentinelValue,
+    Object? object20 = sentinelValue]) {
+  if (sentinelValue == object3) {
+    return SystemHash.hash2(object1.hashCode, object2.hashCode, _hashSeed);
+  }
+  if (sentinelValue == object4) {
+    return SystemHash.hash3(
+        object1.hashCode, object2.hashCode, object3.hashCode, _hashSeed);
+  }
+  if (sentinelValue == object5) {
+    return SystemHash.hash4(object1.hashCode, object2.hashCode,
+        object3.hashCode, object4.hashCode, _hashSeed);
+  }
+  if (sentinelValue == object6) {
+    return SystemHash.hash5(object1.hashCode, object2.hashCode,
+        object3.hashCode, object4.hashCode, object5.hashCode, _hashSeed);
+  }
+  if (sentinelValue == object7) {
+    return SystemHash.hash6(
+        object1.hashCode,
+        object2.hashCode,
+        object3.hashCode,
+        object4.hashCode,
+        object5.hashCode,
+        object6.hashCode,
+        _hashSeed);
+  }
+  if (sentinelValue == object8) {
+    return SystemHash.hash7(
+        object1.hashCode,
+        object2.hashCode,
+        object3.hashCode,
+        object4.hashCode,
+        object5.hashCode,
+        object6.hashCode,
+        object7.hashCode,
+        _hashSeed);
+  }
+  if (sentinelValue == object9) {
+    return SystemHash.hash8(
+        object1.hashCode,
+        object2.hashCode,
+        object3.hashCode,
+        object4.hashCode,
+        object5.hashCode,
+        object6.hashCode,
+        object7.hashCode,
+        object8.hashCode,
+        _hashSeed);
+  }
+  if (sentinelValue == object10) {
+    return SystemHash.hash9(
+        object1.hashCode,
+        object2.hashCode,
+        object3.hashCode,
+        object4.hashCode,
+        object5.hashCode,
+        object6.hashCode,
+        object7.hashCode,
+        object8.hashCode,
+        object9.hashCode,
+        _hashSeed);
+  }
+  if (sentinelValue == object11) {
+    return SystemHash.hash10(
+        object1.hashCode,
+        object2.hashCode,
+        object3.hashCode,
+        object4.hashCode,
+        object5.hashCode,
+        object6.hashCode,
+        object7.hashCode,
+        object8.hashCode,
+        object9.hashCode,
+        object10.hashCode,
+        _hashSeed);
+  }
+  if (sentinelValue == object12) {
+    return SystemHash.hash11(
+        object1.hashCode,
+        object2.hashCode,
+        object3.hashCode,
+        object4.hashCode,
+        object5.hashCode,
+        object6.hashCode,
+        object7.hashCode,
+        object8.hashCode,
+        object9.hashCode,
+        object10.hashCode,
+        object11.hashCode,
+        _hashSeed);
+  }
+  if (sentinelValue == object13) {
+    return SystemHash.hash12(
+        object1.hashCode,
+        object2.hashCode,
+        object3.hashCode,
+        object4.hashCode,
+        object5.hashCode,
+        object6.hashCode,
+        object7.hashCode,
+        object8.hashCode,
+        object9.hashCode,
+        object10.hashCode,
+        object11.hashCode,
+        object12.hashCode,
+        _hashSeed);
+  }
+  if (sentinelValue == object14) {
+    return SystemHash.hash13(
+        object1.hashCode,
+        object2.hashCode,
+        object3.hashCode,
+        object4.hashCode,
+        object5.hashCode,
+        object6.hashCode,
+        object7.hashCode,
+        object8.hashCode,
+        object9.hashCode,
+        object10.hashCode,
+        object11.hashCode,
+        object12.hashCode,
+        object13.hashCode,
+        _hashSeed);
+  }
+  if (sentinelValue == object15) {
+    return SystemHash.hash14(
+        object1.hashCode,
+        object2.hashCode,
+        object3.hashCode,
+        object4.hashCode,
+        object5.hashCode,
+        object6.hashCode,
+        object7.hashCode,
+        object8.hashCode,
+        object9.hashCode,
+        object10.hashCode,
+        object11.hashCode,
+        object12.hashCode,
+        object13.hashCode,
+        object14.hashCode,
+        _hashSeed);
+  }
+  if (sentinelValue == object16) {
+    return SystemHash.hash15(
+        object1.hashCode,
+        object2.hashCode,
+        object3.hashCode,
+        object4.hashCode,
+        object5.hashCode,
+        object6.hashCode,
+        object7.hashCode,
+        object8.hashCode,
+        object9.hashCode,
+        object10.hashCode,
+        object11.hashCode,
+        object12.hashCode,
+        object13.hashCode,
+        object14.hashCode,
+        object15.hashCode,
+        _hashSeed);
+  }
+  if (sentinelValue == object17) {
+    return SystemHash.hash16(
+        object1.hashCode,
+        object2.hashCode,
+        object3.hashCode,
+        object4.hashCode,
+        object5.hashCode,
+        object6.hashCode,
+        object7.hashCode,
+        object8.hashCode,
+        object9.hashCode,
+        object10.hashCode,
+        object11.hashCode,
+        object12.hashCode,
+        object13.hashCode,
+        object14.hashCode,
+        object15.hashCode,
+        object16.hashCode,
+        _hashSeed);
+  }
+  if (sentinelValue == object18) {
+    return SystemHash.hash17(
+        object1.hashCode,
+        object2.hashCode,
+        object3.hashCode,
+        object4.hashCode,
+        object5.hashCode,
+        object6.hashCode,
+        object7.hashCode,
+        object8.hashCode,
+        object9.hashCode,
+        object10.hashCode,
+        object11.hashCode,
+        object12.hashCode,
+        object13.hashCode,
+        object14.hashCode,
+        object15.hashCode,
+        object16.hashCode,
+        object17.hashCode,
+        _hashSeed);
+  }
+  if (sentinelValue == object19) {
+    return SystemHash.hash18(
+        object1.hashCode,
+        object2.hashCode,
+        object3.hashCode,
+        object4.hashCode,
+        object5.hashCode,
+        object6.hashCode,
+        object7.hashCode,
+        object8.hashCode,
+        object9.hashCode,
+        object10.hashCode,
+        object11.hashCode,
+        object12.hashCode,
+        object13.hashCode,
+        object14.hashCode,
+        object15.hashCode,
+        object16.hashCode,
+        object17.hashCode,
+        object18.hashCode,
+        _hashSeed);
+  }
+  if (sentinelValue == object20) {
+    return SystemHash.hash19(
+        object1.hashCode,
+        object2.hashCode,
+        object3.hashCode,
+        object4.hashCode,
+        object5.hashCode,
+        object6.hashCode,
+        object7.hashCode,
+        object8.hashCode,
+        object9.hashCode,
+        object10.hashCode,
+        object11.hashCode,
+        object12.hashCode,
+        object13.hashCode,
+        object14.hashCode,
+        object15.hashCode,
+        object16.hashCode,
+        object17.hashCode,
+        object18.hashCode,
+        object19.hashCode,
+        _hashSeed);
+  }
+  return SystemHash.hash20(
+      object1.hashCode,
+      object2.hashCode,
+      object3.hashCode,
+      object4.hashCode,
+      object5.hashCode,
+      object6.hashCode,
+      object7.hashCode,
+      object8.hashCode,
+      object9.hashCode,
+      object10.hashCode,
+      object11.hashCode,
+      object12.hashCode,
+      object13.hashCode,
+      object14.hashCode,
+      object15.hashCode,
+      object16.hashCode,
+      object17.hashCode,
+      object18.hashCode,
+      object19.hashCode,
+      object20.hashCode,
+      _hashSeed);
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    gms_check
+      1.0.0
+  </span>
+
+  <!-- footer-text placeholder -->
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- footer placeholder -->
+
+</body>
+
+</html>

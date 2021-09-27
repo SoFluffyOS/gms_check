@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the onError method from the FutureExtensions extension, for the Dart programming language.">
+  <title>onError method - FutureExtensions extension - dart:async library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../..">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+  <!-- header placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">gms_check</a></li>
+    <li><a href="dart-async/dart-async-library.html">dart:async</a></li>
+    <li><a href="dart-async/FutureExtensions.html">FutureExtensions<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></a></li>
+    <li class="self-crumb">onError&lt;<wbr><span class="type-parameter">E extends Object</span>&gt; method</li>
+  </ol>
+  <div class="self-name">onError</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="index.html">gms_check</a></li>
+      <li><a href="dart-async/dart-async-library.html">dart:async</a></li>
+      <li><a href="dart-async/FutureExtensions.html">FutureExtensions<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></a></li>
+      <li class="self-crumb">onError&lt;<wbr><span class="type-parameter">E extends Object</span>&gt; method</li>
+    </ol>
+    
+    <h5>FutureExtensions extension</h5>
+    <ol>
+    
+    
+    
+        <li class="section-title"><a href="dart-async/FutureExtensions.html#instance-methods">Methods</a></li>
+        <li><a href="dart-async/FutureExtensions/ignore.html">ignore</a></li>
+        <li><a href="dart-async/FutureExtensions/onError.html">onError</a></li>
+    
+    
+    
+    
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <div><h1><span class="kind-method">onError&lt;<wbr><span class="type-parameter">E extends Object</span>&gt;</span> method</h1></div>
+
+    <section class="multi-line-signature">
+      <span class="returntype"><a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>
+            <span class="name ">onError</span>
+&lt;<wbr><span class="type-parameter">E extends Object</span>&gt;(<wbr><span class="parameter" id="onError-param-handleError"><span class="type-annotation"><a href="dart-async/FutureOr-class.html">FutureOr</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">handleError</span>(<span class="parameter" id="param-error"><span class="type-annotation">E</span> <span class="parameter-name">error</span>, </span> <span class="parameter" id="param-stackTrace"><span class="type-annotation"><a href="dart-core/StackTrace-class.html">StackTrace</a></span> <span class="parameter-name">stackTrace</span></span>), {</span> <span class="parameter" id="onError-param-test"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">test</span>(<span class="parameter" id="param-error"><span class="type-annotation">E</span> <span class="parameter-name">error</span></span>)</span> })
+      
+    </section>
+    <section class="desc markdown">
+      <p>Handles errors on this future.</p>
+<p>Catches errors of type <code>E</code> that this future complete with.
+If <code>test</code> is supplied, only catches errors of type <code>E</code>
+where <code>test</code> returns <code>true</code>.
+If <code>E</code> is <code>Object</code>, then all errors are potentially caught,
+depending only on a supplied <code>test</code>.toString()</p>
+<p>If the error is caught,
+the returned future completes with the result of calling <code>handleError</code>
+with the error and stack trace.
+This result must be a value of the same type that this future
+could otherwise complete with.
+For example, if this future cannot complete with <code>null</code>,
+then <code>handleError</code> also cannot return <code>null</code>.
+Example:</p>
+<pre class="language-dart"><code class="language-dart">Future&lt;T&gt; retryOperation&lt;T&gt;(Future&lt;T&gt; operation(), T onFailure()) =&gt;
+    operation().onError&lt;RetryException&gt;((e, s) {
+      if (e.canRetry) {
+        return retryOperation(operation, onFailure);
+      }
+      return onFailure();
+    });
+</code></pre>
+<p>If <code>handleError</code> throws, the returned future completes
+with the thrown error and stack trace,
+except that if it throws the <em>same</em> error object again,
+then it is considered a "rethrow"
+and the original stack trace is retained.
+This can be used as an alternative to skipping the
+error in <code>test</code>.
+Example:</p>
+<pre class="language-dart"><code class="language-dart">// Unwraps an an exceptions cause, if it has one.
+someFuture.onError&lt;SomeException&gt;((e, _) {
+  throw e.cause ?? e;
+});
+// vs.
+someFuture.onError&lt;SomeException&gt;((e, _) {
+  throw e.cause!;
+}, test: (e) =&gt; e.cause != null);
+</code></pre>
+<p>If the error is not caught, the returned future
+completes with the same result, value or error,
+as this future.</p>
+<p>This method is effectively a more precisely typed version
+of <code>Future.catchError</code>.
+It makes it easy to catch specific error types,
+and requires a correctly typed error handler function,
+rather than just <code>Function</code>.
+Because of this, the error handlers must accept
+the stack trace argument.</p>
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Implementation</span></h2>
+      <pre class="language-dart"><code class="language-dart">Future&lt;T&gt; onError&lt;E extends Object&gt;(
+    FutureOr&lt;T&gt; handleError(E error, StackTrace stackTrace),
+    {bool test(E error)?}) {
+  &#47;&#47; There are various ways to optimize this to avoid the double is E&#47;as E
+  &#47;&#47; type check, but for now we are not optimizing the error path.
+  return this.catchError(
+      (Object error, StackTrace stackTrace) =&gt;
+          handleError(error as E, stackTrace),
+      test: (Object error) =&gt; error is E &amp;&amp; (test == null || test(error)));
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    gms_check
+      1.0.0
+  </span>
+
+  <!-- footer-text placeholder -->
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- footer placeholder -->
+
+</body>
+
+</html>
