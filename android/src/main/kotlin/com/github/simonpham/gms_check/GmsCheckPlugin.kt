@@ -2,9 +2,7 @@ package com.github.simonpham.gms_check
 
 import android.app.Activity
 import android.content.Context
-import androidx.annotation.NonNull
 import com.google.android.gms.common.GoogleApiAvailability
-
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
@@ -27,13 +25,13 @@ class GmsCheckPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
     private lateinit var context: Context
     private lateinit var activity: Activity
 
-    override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
+    override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
         channel = MethodChannel(flutterPluginBinding.binaryMessenger, METHOD_CHANNEL)
         channel.setMethodCallHandler(this)
         context = flutterPluginBinding.applicationContext
     }
 
-    override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
+    override fun onMethodCall(call: MethodCall, result: Result) {
         when (call.method) {
             IS_GMS_AVAILABLE -> {
                 result.success(isGmsAvailable())
@@ -42,7 +40,7 @@ class GmsCheckPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
         }
     }
 
-    override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
+    override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {
         channel.setMethodCallHandler(null)
     }
 
