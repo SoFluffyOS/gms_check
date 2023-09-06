@@ -22,7 +22,10 @@ class GmsCheck {
   bool get isGmsAvailable {
     if (_isGmsAvailable == null) {
       throw Exception(
-          '[GMS Availability]: checkGmsAvailability() needed to call before using GmsTools().isGmsAvailable.');
+        '[GMS Availability]: '
+        'Need to call GmsCheck().checkGmsAvailability() '
+        'before using GmsCheck().isGmsAvailable.',
+      );
     }
     return _isGmsAvailable ?? true;
   }

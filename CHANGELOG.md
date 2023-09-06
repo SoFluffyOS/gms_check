@@ -1,3 +1,8 @@
+## 1.0.2
+* Upgrade `com.google.android.gms:play-services-base:18.2.0` (thanks to @tgloc96)
+* Update Dart SDK constraint.
+* Improve docs.
+
 ## 1.0.1
 
 * Upgrade Kotlin `1.7.10`
