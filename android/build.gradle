@@ -29,7 +29,7 @@ android {
         namespace = "com.github.simonpham.gms_check"
     }
 
-    compileSdk = 34
+    compileSdk = 35
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -50,6 +50,6 @@ android {
     }
 
     dependencies {
-        implementation("com.google.android.gms:play-services-base:18.5.0")
+        implementation("com.google.android.gms:play-services-base:18.7.2")
     }
 }
