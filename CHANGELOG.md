@@ -1,3 +1,8 @@
+## 1.0.4
+* Replace `MethodChannel` with `OptionalMethodChannel` to prevent `MissingPluginException` on other platforms (#2).
+* Upgrade `compileSdk = 35`.
+* Upgrade `com.google.android.gms:play-services-base:18.7.2`.
+
 ## 1.0.3
 * Upgrade Kotlin `1.8.22`.
 * Upgrade Gradle `8.1.4`.
