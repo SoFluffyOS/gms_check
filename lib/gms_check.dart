@@ -1,14 +1,14 @@
 import 'dart:async';
 
 import 'package:flutter/services.dart'
-    show MethodChannel, MissingPluginException, PlatformException;
+    show MethodChannel, PlatformException, OptionalMethodChannel;
 import 'package:flutter/widgets.dart' show WidgetsFlutterBinding, debugPrint;
 
 const String _channelName = 'com.github.simonpham.gms_check';
 
 /// For Google Play Services check to prevent app crashing.
 class GmsCheck {
-  static const MethodChannel _channel = MethodChannel(_channelName);
+  static const MethodChannel _channel = OptionalMethodChannel(_channelName);
   static const _isGmsAvailableMethod = 'isGmsAvailable';
 
   static final GmsCheck _instance = GmsCheck._internal();
@@ -38,19 +38,19 @@ class GmsCheck {
     _isGmsAvailable = false;
 
     try {
+      /// This MethodChannel is only available on Android.
+      /// Other platform will return null.
       final status = await _channel.invokeMethod(_isGmsAvailableMethod);
       if (enableLog) {
         debugPrint('[GMS Availability]: ${status.toString()}');
       }
-      _isGmsAvailable = status;
+
+      /// Default true for other platform.
+      _isGmsAvailable = status ?? true;
     } on PlatformException {
       if (enableLog) {
         debugPrint('[GMS Availability]: Failed to get isGmsAvailable.');
       }
-    } on MissingPluginException {
-      /// Just need to check for Android.
-      /// Default true for other OS.
-      _isGmsAvailable = true;
     }
     return _isGmsAvailable;
   }
