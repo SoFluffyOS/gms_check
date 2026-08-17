@@ -1,3 +1,9 @@
+## 1.1.0
+ * Built-in Kotlin migration ([#4](https://github.com/SoFluffyOS/gms_check/pull/4))
+ * Update minimum SDK to Flutter 3.44 / Dart 3.12
+ * Example app updates for Flutter 3.44 compatibility
+ * Dependency update: play-services-base from 18.7.2 to 18.10.0
+
 ## 1.0.4
 * Replace `MethodChannel` with `OptionalMethodChannel` to prevent `MissingPluginException` on other platforms (#2).
 * Upgrade `compileSdk = 35`.
